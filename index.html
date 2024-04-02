@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+    <title>Screen Video Recorder</title>
+
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+
+    <script src="assets/js/tailwindcss-3.3.3.js"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</head>
+<body>
+    <section class="bg-gray-800 text-white">
+        <header class="bg-gray-900">
+            <div class="container mx-auto">
+                <div class="flex justify-center items-center py-4">
+                    <h1 class="text-2xl font-bold uppercase">Grabador de Pantalla Online</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="overflow-hidden">
+            <div class="container mx-auto py-8 px-4">
+                <h2 class="text-xl text-gray-500 uppercase font-light mb-4">
+                    Grabador de Video
+                </h2>
+
+                <video
+                        src=""
+                        autoPlay
+                        class="video-feedback bg-black w-full h-auto mb-4"
+                ></video>
+
+                <div class="flex flex-wrap -mx-4 mb-8">
+                    <button class="start-recording mx-4 flex-1 bg-gradient-to-br from-sky-600 to to-slate-900 p-4 uppercase text-lg font-bold transition-all duration-300 hover:opacity-90 disabled:opacity-50 rounded-md">
+                        Grabar
+                    </button>
+                    <button
+                            class="stop-recording mx-4 flex-1 bg-gradient-to-br from-sky-600 to to-slate-900 p-4 uppercase text-lg font-bold transition-all duration-300 hover:opacity-90 disabled:opacity-50 rounded-md"
+                            disabled
+                    >
+                        Detener
+                    </button>
+                </div>
+
+                <div class="recorded-video-wrap hidden">
+                    <h2 class="text-xl text-gray-500 uppercase font-light mb-4">
+                        Video Grabado
+                    </h2>
+
+                    <video
+                            src=""
+                            class="recorded-video bg-black w-full h-auto mb-8"
+                    ></video>
+                    <div class="flex flex-wrap -mx-4">
+                        <a
+                                class="download-video text-center mx-4 flex-1 bg-gradient-to-br from-sky-600 to to-slate-900 p-4 uppercase text-lg font-bold transition-all duration-300 hover:opacity-90 disabled:opacity-50 rounded-md"
+                                disabled
+                        >
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
